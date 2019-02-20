@@ -50,12 +50,12 @@ export default {
       display: inline-block;
       width: 116px;
       font-size: 16px;
-      color: #fefeff;
+      color: #b5b5b5;
       line-height: 48px;
       text-align: center;
-    }
-    .option:hover{
-      color: #ffffff;
+      &:hover{
+        color: #ffffff;
+      }
     }
   }
   .phone_logo_box{

@@ -12,7 +12,12 @@
     </div>
     <!-- 智慧服务 -->
     <div class="wisdom_service_box">
-      
+      <div class="width">
+        <div class="circle_box">
+          <a href="javascript:void(0);">大数据</a>
+          <h2 class="cente_text">智慧数据分析</h2>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -78,6 +83,22 @@ export default {
     height: 960px;
     background:url('../assets/images/banner2.png') no-repeat;
     background-size: 100% 100%;
+    .circle_box{
+      width: 426px;
+      height: 426px;
+      background: url('../assets/images/circle1.png') no-repeat;
+      position: relative;
+      a{
+        display: block;
+        width: 95px;
+        height: 95px;
+        position: absolute;
+      }
+      .cente_text{
+        font-size: 30px;
+        color: #ffffff;
+      }
+    }
   }
 }
 </style>
