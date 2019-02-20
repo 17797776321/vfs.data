@@ -32,7 +32,7 @@ export default {
 </script>
 <style lang="less">
 .my_nav {
-  width: 100%;
+  width: 1920px;
   background-color: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;

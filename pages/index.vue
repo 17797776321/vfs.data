@@ -23,6 +23,12 @@
         </div>
       </div>
     </div>
+    <!-- 小微优势 -->
+    <div class="advantage_box">
+      <div class="width">
+
+      </div>
+    </div>
   </section>
 </template>
 
@@ -134,6 +140,12 @@ export default {
         line-height: 54px;
       }
     }
+  }
+  .advantage_box{
+    width: 1920px;
+    height: 960px;
+    background: url('../assets/images/banner3.png') no-repeat;
+    background-size: 100% 100%;
   }
 }
 </style>
