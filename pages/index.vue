@@ -51,16 +51,14 @@
           <p class="des">的全流程数据驱动解决方案，帮助企业驱动业务决策和产品智能。</p>
         </div>
         <div class="main">
-          <a href="javascript:void(0);" class="option_box">
+          <a href="javascript:void(0);" class="option_box" :class="[index === 2?'':'mr']" v-for="(item,index) in projectList" :key="index">
             <div class="option_header">
-              <img src="" alt="">
-              <h2>数据管理</h2>
+              <img :src="item.img" alt="">
+              <h2>{{item.title}}</h2>
             </div>
             <div class="option_main">
-              <div class="text_des">基于云计算，为企业提供数据收集、抓取、集成、处理等定制化服务，制定一体化数据管理解决方案</div>
-              <h2>大数据云平台的搭建</h2>
-              <h2>数据集成</h2>
-              <h2>数据采集</h2>
+              <div class="text_des">{{item.des}}</div>
+              <h2 v-for="(option,n) in item.options" :key="n">{{option}}</h2>
             </div>
           </a>
         </div>
@@ -76,6 +74,13 @@ import icon1 from '@/assets/images/icon1.png'
 import icon2 from '@/assets/images/icon2.png'
 import icon3 from '@/assets/images/icon3.png'
 import icon4 from '@/assets/images/icon4.png'
+
+import pro1 from '@/assets/images/pro1.png'
+import proac1 from '@/assets/images/proac1.png'
+import pro2 from '@/assets/images/pro2.png'
+import proac2 from '@/assets/images/proac2.png'
+import pro3 from '@/assets/images/pro3.png'
+import proac3 from '@/assets/images/proac3.png'
 export default {
   name:'Home',
   components:{
@@ -104,6 +109,29 @@ export default {
           title:'大数据解决方案',
           des:'广告转化预测模型和系统解决方案，广告投放CTR预测模型解决方案，数据标签化处理和资产变现解决方案，个性化推荐解决方案。'
         }
+      ],
+      projectList:[
+        {
+          img:pro1,
+          acimg:proac1,
+          title:'数据管理',
+          des:'基于云计算，为企业提供数据收集、抓取、集成、处理等定制化服务，制定一体化数据管理解决方案',
+          options:['大数据云平台的搭建','数据集成','数据采集']
+        },
+        {
+          img:pro2,
+          acimg:proac2,
+          title:'数据分析',
+          des:'深入理解企业业务逻辑，为企业提供定制化的数据收集、清洗、建模、分析、可视化等服务。',
+          options:['数据建模服务','算法支撑服务','数据可视化服务']
+        },
+        {
+          img:pro3,
+          acimg:proac3,
+          title:'系统定制开发',
+          des:'完善企业业务流程系统，建立销售平台、客户关系管理、风险防范等互联网弹性架构，实现多维度后台实时查询和监测。',
+          options:['CRM系统','金融业务系统']
+        },
       ]
     }
   }
@@ -288,15 +316,44 @@ export default {
     .main{
       padding-top: 88px;
       text-align: center;
+      .mr{
+        margin-right: 26px;
+      }
       .option_box{
         display: inline-block;
         width: 372px;
+        height: 468px;
         border: 2px solid #E4E4E4;
+        background: #ffffff;
+        vertical-align: top;
         .option_header{
-          height: 178px;
+          height: 148px;
+          padding-top: 30px;
           background-color: #ffffff;
+          img{
+            display: block;
+            margin: 0 auto;
+          }
+          h2{
+            padding-top: 15px;
+            font-size: 22px;
+            color: #333333;
+            line-height: 50px;
+          }
         }
-        .option_main{}
+        .option_main{
+          padding:0 12px;
+          .text_des{
+            font-size: 18px;
+            color: #9d9d9d;
+            padding: 25px 0;
+          }
+          h2{
+            font-size: 18px;
+            color: #333333;
+            line-height: 38px;
+          }
+        }
       }
     }
   }
