@@ -42,6 +42,17 @@
         </div>
       </div>
     </div>
+    <!-- project -->
+    <div class="project_box">
+      <div class="width">
+        <div class="header">
+          <h2 class="tit">我们的优势</h2>
+          <p class="des">小微数据提供从采集、建模、存储、分析、智能应用</p>
+          <p class="des">的全流程数据驱动解决方案，帮助企业驱动业务决策和产品智能。</p>
+        </div>
+        <div class="main"></div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -229,6 +240,39 @@ export default {
         width: 100%;
       }
     }
+  }
+  .project_box{
+    width: 1920px;
+    height: 1080px;
+    background: url('../assets/images/banner4.png') no-repeat;
+    background-size: 100% 100%;
+    .header{
+      padding-top: 116px;
+      text-align: center;
+      .tit{
+        font-size: 34px;
+        color: #333333;
+        line-height: 56px;
+         padding-bottom: 24px;
+        position: relative;
+        &::after{
+          content: '';
+          display: block;
+          width: 60px;
+          height: 2px;
+          background-color: #CC0000;
+          position: absolute;
+          left: 570px;
+          bottom: 13px;
+        }
+      }
+      .des{
+        font-size: 16px;
+        color: #333333;
+        line-height: 34px;
+      }
+    }
+    .main{}
   }
 }
 </style>
