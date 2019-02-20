@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <my-nav></my-nav>
-    <nuxt />
+    <nuxt class="views_box"/>
   </div>
 </template>
 <script>
@@ -20,4 +20,8 @@ export default {
 </script>
 
 <style lang="less">
+.layout{
+  .views_box{
+  }
+}
 </style>
