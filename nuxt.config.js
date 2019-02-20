@@ -29,6 +29,7 @@ module.exports = {
   */
   css: [
     'normalize.css',
+    '@/assets/icons/iconfont.css',
     '@/assets/style/global.css'
   ],
 
