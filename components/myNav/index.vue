@@ -34,6 +34,9 @@ export default {
 .my_nav {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  z-index: 999;
   .logo_box {
     padding: 18px 55px;
     img {
@@ -47,9 +50,12 @@ export default {
       display: inline-block;
       width: 116px;
       font-size: 16px;
-      color: #ffffff;
+      color: #fefeff;
       line-height: 48px;
       text-align: center;
+    }
+    .option:hover{
+      color: #ffffff;
     }
   }
   .phone_logo_box{

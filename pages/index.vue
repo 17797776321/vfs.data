@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    首页
+    <div class=""></div>
   </section>
 </template>
 
