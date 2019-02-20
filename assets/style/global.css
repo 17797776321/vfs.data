@@ -51,3 +51,7 @@ a:link{
 *{
   -webkit-tap-highlight-color: transparent;
 }
+.width{
+  width: 1200px;
+  margin: 0 auto;
+}
