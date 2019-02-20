@@ -50,7 +50,20 @@
           <p class="des">小微数据提供从采集、建模、存储、分析、智能应用</p>
           <p class="des">的全流程数据驱动解决方案，帮助企业驱动业务决策和产品智能。</p>
         </div>
-        <div class="main"></div>
+        <div class="main">
+          <a href="javascript:void(0);" class="option_box">
+            <div class="option_header">
+              <img src="" alt="">
+              <h2>数据管理</h2>
+            </div>
+            <div class="option_main">
+              <div class="text_des">基于云计算，为企业提供数据收集、抓取、集成、处理等定制化服务，制定一体化数据管理解决方案</div>
+              <h2>大数据云平台的搭建</h2>
+              <h2>数据集成</h2>
+              <h2>数据采集</h2>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -272,7 +285,20 @@ export default {
         line-height: 34px;
       }
     }
-    .main{}
+    .main{
+      padding-top: 88px;
+      text-align: center;
+      .option_box{
+        display: inline-block;
+        width: 372px;
+        border: 2px solid #E4E4E4;
+        .option_header{
+          height: 178px;
+          background-color: #ffffff;
+        }
+        .option_main{}
+      }
+    }
   }
 }
 </style>
