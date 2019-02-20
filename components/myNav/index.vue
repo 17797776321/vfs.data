@@ -33,7 +33,7 @@ export default {
 <style lang="less">
 .my_nav {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   z-index: 999;
