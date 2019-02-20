@@ -25,8 +25,21 @@
     </div>
     <!-- 小微优势 -->
     <div class="advantage_box">
-      <div class="width">
-
+      <div class="width clearfix">
+        <ul class="list fl">
+          <li class="option_box clearfix" v-for="(item,index) in wisdomList" :key="index">
+            <div class="img_box fl">
+              <img :src="item.img" alt="">
+            </div>
+            <div class="text_box fl">
+              <h2 class="tit">{{item.title}}</h2>
+              <p class="des">{{item.des}}</p>
+            </div>
+          </li>
+        </ul>
+        <div class="banner_img_box fr">
+          <img src="../assets/images/banner7.png" alt="">
+        </div>
       </div>
     </div>
   </section>
@@ -34,10 +47,41 @@
 
 <script>
 import mySitebar from '@/components/mySitebar/index.vue'
+
+import icon1 from '@/assets/images/icon1.png'
+import icon2 from '@/assets/images/icon2.png'
+import icon3 from '@/assets/images/icon3.png'
+import icon4 from '@/assets/images/icon4.png'
 export default {
   name:'Home',
   components:{
     mySitebar
+  },
+  data() {
+    return {
+      wisdomList:[
+        {
+          img:icon1,
+          title:'营销云',
+          des:'全媒体整合多渠道广告触达,线上线下数据搜集实现场景化营销,唯一恪守贴牌定制合作模式,自主溢价模式利润高。'
+        },
+        {
+          img:icon2,
+          title:'数据管理DMP',
+          des:'全媒体整合多渠道广告触达,释放数据价值，提升营销效果全面精确的人群管理安全、开放、专业。'
+        },
+        {
+          img:icon3,
+          title:'智子盒子',
+          des:'人工智能营销管家，线上线下数据汇通融合，智慧零售零距离营销，打破线下实体营销困境。'
+        },
+        {
+          img:icon4,
+          title:'大数据解决方案',
+          des:'广告转化预测模型和系统解决方案，广告投放CTR预测模型解决方案，数据标签化处理和资产变现解决方案，个性化推荐解决方案。'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -47,7 +91,7 @@ export default {
   display: block;
   .banner_box{
     width: 1920px;
-    height: 959px;
+    height: 960px;
     background:url('../assets/images/banner1.png') no-repeat;
     background-size: 100% 100%;
     .cn{
@@ -146,6 +190,45 @@ export default {
     height: 960px;
     background: url('../assets/images/banner3.png') no-repeat;
     background-size: 100% 100%;
+    .list{
+      padding-top: 76px;
+      padding-left: 70px;
+      .option_box{
+        padding-top: 40px;
+        .img_box{
+          width: 60px;
+          height: 60px;
+          img{
+            display: block;
+            width: 100%;
+          }
+        }
+        .text_box{
+          padding-left: 30px;
+          width: 662px;
+          .tit{
+            font-size: 28px;
+            color: #172027;
+            line-height: 62px;
+          }
+          .des{
+            font-size: 14px;
+            color: #172027;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+    .banner_img_box{
+      display: block;
+      width: 282px;
+      height: 200px;
+      margin-top: 300px;
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
   }
 }
 </style>
