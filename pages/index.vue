@@ -53,7 +53,7 @@
         <div class="main">
           <a href="javascript:void(0);" class="option_box" :class="[index === 2?'':'mr']" v-for="(item,index) in projectList" :key="index">
             <div class="option_header">
-              <span class="iconfont icon-xitong2"></span>
+              <!-- <span class="iconfont icon-xitong2"></span> -->
               <img :src="item.img" alt="">
               <h2>{{item.title}}</h2>
             </div>
