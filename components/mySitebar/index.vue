@@ -37,6 +37,9 @@ export default {
     }
     .active{
       position: relative;
+      a{
+        color: #999999;
+      }
       &::after{
         content:'';
         display: block;
