@@ -1,0 +1,53 @@
+a{
+  text-decoration:none
+}
+a:active{
+  text-decoration:none
+}
+a:visited{
+  text-decoration:none
+}
+a:link{
+  text-decoration:none
+}
+.clearfix:before,
+.clearfix:after {
+  content: ' ';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+  overflow: hidden;
+}
+.clearfix {
+  zoom: 1; /* for IE6 IE7 */
+}
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+/* 设置显示和隐藏, 通常用来与 JS 配合 */
+.hide {
+  /*!important最高权重*/
+  display: none !important;
+  visibility: hidden;
+}
+.block {
+  display: block !important;
+}
+/* 设置内联, 减少浮动带来的bug */
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+*{
+  -webkit-tap-highlight-color: transparent;
+}
