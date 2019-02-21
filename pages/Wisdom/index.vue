@@ -1,6 +1,6 @@
 <template>
   <div class="page-wisdom">
-    <div class=""></div>
+    <div class="banenr_box"></div>
   </div>
 </template>
 <script>
@@ -11,5 +11,12 @@ export default {
 }
 </script>
 <style lang="less">
-.page-wisdom{}
+.page-wisdom{
+  .banenr_box{
+    width: 1920px;
+    height: 797px;
+    background: url('../../assets/images/wisdombanner.png') no-repeat;
+    background-size: 100% 100%;
+  }
+}
 </style>
