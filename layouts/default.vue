@@ -2,14 +2,17 @@
   <div class="layout">
     <my-nav></my-nav>
     <nuxt class="views_box"/>
+    <my-footer></my-footer>
   </div>
 </template>
 <script>
 import myNav from '@/components/myNav/index.vue'
+import myFooter from '@/components/myFooter/index.vue'
 export default {
   name:'Layout',
   components:{
-    myNav
+    myNav,
+    myFooter
   },
   data() {
     return{
