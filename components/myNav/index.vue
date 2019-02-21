@@ -7,13 +7,13 @@
       </div>
       <div class="nav_box fl">
         <a href="javascript:void(0);"
-           class="option">网站首页</a>
+           class="option" @click="jump_page('/')">网站首页</a>
         <a href="javascript:void(0);"
            class="option">智慧数据</a>
         <a href="javascript:void(0);"
            class="option">解决方案</a>
         <a href="javascript:void(0);"
-           class="option">关于我们</a>
+           class="option" @click="jump_page('/About')">关于我们</a>
       </div>
       <div class="phone_logo_box fr">
         <img class="phone_img" src="../../assets/images/phonelogo.png" alt="">
@@ -27,6 +27,11 @@ export default {
   name: 'MyNav',
   data () {
     return {}
+  },
+  methods:{
+    jump_page(path) {
+      this.$router.push({path:path})
+    }
   }
 }
 </script>
