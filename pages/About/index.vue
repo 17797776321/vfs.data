@@ -15,13 +15,28 @@
         </div>
       </div>
     </div>
+    <div class="curve_box">
+      <div class="width list">
+        <a href="javascript:void(0);" v-for="(item,index) in curveList" :key="index">
+          <h2 class="tit">{{item.tit}}</h2>
+          <p class="des">{{item.des}}</p>
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 <script>
 export default {
   name: 'About',
   data () {
-    return {}
+    return {
+      curveList:[
+        {tit:'10 +',des:'年互联网品牌建站经验'},
+        {tit:'10 +',des:'公司团队员工'},
+        {tit:'600 +',des:'知名企业服务经验'},
+        {tit:'6 +',des:'行业标准解决方案'}
+      ]
+    }
   }
 }
 </script>
@@ -86,6 +101,29 @@ export default {
         color: #83868f;
         line-height: 36px;
         text-indent: 28px;
+      }
+    }
+  }
+  .curve_box{
+    width: 1920px;
+    height: 492px;
+    background: url('../../assets/images/curve.png') no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+    .list{
+      padding-top: 116px;
+      a{
+        display: inline-block;
+        width: 300px;
+        color: #ffffff;
+        .tit{
+          font-size: 72px;
+          line-height: 96px;
+        }
+        .des{
+          font-size: 16px;
+          line-height: 46px;
+        }
       }
     }
   }
