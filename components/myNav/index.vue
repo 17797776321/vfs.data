@@ -11,7 +11,7 @@
         <a href="javascript:void(0);"
            class="option" @click="jump_page('/Wisdom')">智慧数据</a>
         <a href="javascript:void(0);"
-           class="option">解决方案</a>
+           class="option" @click="jump_page('/Solution')">解决方案</a>
         <a href="javascript:void(0);"
            class="option" @click="jump_page('/About')">关于我们</a>
       </div>
