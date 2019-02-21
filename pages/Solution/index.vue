@@ -150,6 +150,17 @@ export default {
       background-color: #E3F4FB;
       margin-top: 34px;
       padding: 55px 0;
+      position: relative;
+      &::after{
+        content: '';
+        display: block;
+        width: 1px;
+        height: 334px;
+        background-color: #666666;
+        position: absolute;
+        top: 34px;
+        left: 610px;
+      }
       .box{
         width: 50%;
         text-align: center;
