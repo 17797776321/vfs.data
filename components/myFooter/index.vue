@@ -5,22 +5,22 @@
       <a href="javascript:void(0);" class="mr">
         <div class="img_box bg1"></div>
         <div class="tit">地址</div>
-        <div class="des">河南省郑州市郑东新区东风南路绿地之窗景峰座5022</div>
+        <a href="javascript:void(0);" class="des">河南省郑州市郑东新区东风南路绿地之窗景峰座5022</a>
       </a>
       <a href="javascript:void(0);" class="mr">
         <div class="img_box bg2"></div>
         <div class="tit">电话</div>
-        <div class="des">400-816-7772</div>
+        <a href="javascript:void(0);" class="des">400-816-7772</a>
       </a>
       <a href="javascript:void(0);" class="mr">
         <div class="img_box bg3"></div>
         <div class="tit">邮箱</div>
-        <div class="des">66378@qq.com</div>
+        <a href="javascript:void(0);" class="des">66378@qq.com</a>
       </a>
       <a href="javascript:void(0);">
         <div class="img_box bg4"></div>
         <div class="tit">网址</div>
-        <div class="des">www.vfengs.com/About/index.html</div>
+        <a href="www.vfengs.com/About/index.html" target="blank" class="des">www.vfengs.com/About/index.html</a>
       </a>
     </div>
   </div>
@@ -82,9 +82,13 @@ export default {
         padding-top: 10px;
       }
       .des{
+        display: block;
         font-size: 15px;
         color: #6f6e6a;
         line-height: 32px;
+        &:hover{
+          color: #ffffff;
+        }
       }
     }
     .mr{
