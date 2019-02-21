@@ -9,7 +9,7 @@
         <a href="javascript:void(0);"
            class="option" @click="jump_page('/')">网站首页</a>
         <a href="javascript:void(0);"
-           class="option">智慧数据</a>
+           class="option" @click="jump_page('/Wisdom')">智慧数据</a>
         <a href="javascript:void(0);"
            class="option">解决方案</a>
         <a href="javascript:void(0);"
