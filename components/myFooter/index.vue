@@ -20,7 +20,7 @@
       <a href="javascript:void(0);">
         <div class="img_box bg4"></div>
         <div class="tit">网址</div>
-        <a href="www.vfengs.com/About/index.html" target="blank" class="des">www.vfengs.com/About/index.html</a>
+        <a href="http:\\www.vfengs.com/About/index.html" target="blank" class="des">www.vfengs.com/About/index.html</a>
       </a>
     </div>
   </div>
@@ -29,9 +29,7 @@
 export default {
   name: 'Footer',
   data() {
-    return {
-      list:[]
-    }
+    return {}
   }
 }
 </script>

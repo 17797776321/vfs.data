@@ -1,6 +1,6 @@
 <template>
   <div class="page-wisdom">
-    智慧数据
+    <div class=""></div>
   </div>
 </template>
 <script>
