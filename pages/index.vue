@@ -4,10 +4,12 @@
     <my-sitebar></my-sitebar>
     <!-- 智慧数据 -->
     <div class="banner_box">
-      <h2 class="cn">海量数据 引领未来</h2>
+      <h2 class="cn"
+          :class="{'myhidden':show}">海量数据 引领未来</h2>
       <h3 class="en">Massive Data Leads the Future</h3>
       <div class="btn_group">
         <a href="javascript:void(0);"
+           @click="show =!show "
            class="wisdom_data">智慧数据</a><a href="javascript:void(0);"
            class="contact_us">联系我们</a>
       </div>
@@ -126,6 +128,7 @@ export default {
   },
   data () {
     return {
+      show: true,
       wisdomList: [
         {
           img: icon1,
