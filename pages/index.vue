@@ -5,11 +5,12 @@
     <!-- 智慧数据 -->
     <div class="banner_box">
       <h2 class="cn"
+          ref="title"
           :class="{'myhidden':show}">海量数据 引领未来</h2>
       <h3 class="en">Massive Data Leads the Future</h3>
       <div class="btn_group">
         <a href="javascript:void(0);"
-           @click="show =!show "
+           @click="show =!show"
            class="wisdom_data">智慧数据</a><a href="javascript:void(0);"
            class="contact_us">联系我们</a>
       </div>
@@ -108,6 +109,7 @@
 </template>
 
 <script>
+import { ScrollAnimate } from '@/utils/animate.js'
 import mySitebar from '@/components/mySitebar/index.vue'
 
 import icon1 from '@/assets/images/icon1.png'
@@ -177,9 +179,7 @@ export default {
     }
   },
   mounted () {
-  },
-  methods: {
-
+    new ScrollAnimate(this.$refs.title,'fadeInUp')
   }
 }
 </script>
