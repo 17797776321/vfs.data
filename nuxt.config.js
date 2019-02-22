@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const webpack = require('webpack')
 
 
 module.exports = {
@@ -38,6 +39,13 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    new webpack.ProvidePlugin(
+      {
+        $:'jquery',
+        jQuery:'jquery',
+        'window.jQuery':'jquery'
+      }
+    )
   ],
 
   /*
