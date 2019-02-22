@@ -36,8 +36,8 @@ export class ScrollAnimate {
   addAnimate(){
     let self = this
     // /* 先删后加*/
-    // this.dom.classList.remove('animated')
-    // this.dom.classList.remove(self.mode)
+    this.dom.classList.remove('animated')
+    this.dom.classList.remove(self.mode)
     /* 去掉隐藏 */
     this.dom.classList.remove('myhidden')
     this.dom.classList.add('animated')
