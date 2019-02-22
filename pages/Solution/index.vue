@@ -192,6 +192,7 @@ export default {
     }
   }
   .main_box {
+    width: 1920px;
     background-color: #bbdcf2;
     padding-top: 30px;
     padding-bottom: 72px;
