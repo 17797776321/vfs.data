@@ -4,13 +4,15 @@
     <my-sitebar></my-sitebar>
     <!-- 智慧数据 -->
     <div class="banner_box">
-      <h2 class="cn"
-          ref="title"
-          :class="{'myhidden':show}">海量数据 引领未来</h2>
-      <h3 class="en">Massive Data Leads the Future</h3>
+      <div style="padding-top:375px">
+        <h2 class="cn myhidden"
+            ref="cn">海量数据 引领未来</h2>
+      </div>
+
+      <h3 class="en"
+          ref="en">Massive Data Leads the Future</h3>
       <div class="btn_group">
         <a href="javascript:void(0);"
-           @click="show =!show"
            class="wisdom_data">智慧数据</a><a href="javascript:void(0);"
            class="contact_us">联系我们</a>
       </div>
@@ -20,16 +22,21 @@
       <div class="width">
         <div class="circle_box">
           <a href="javascript:void(0);"
-             class="pos1">大数据</a>
+             ref="circle1"
+             class="pos1 myhidden">大数据</a>
           <a href="javascript:void(0);"
-             class="pos2">提高盈利</a>
+             class="pos2 myhidden"
+             ref="circle2">提高盈利</a>
           <a href="javascript:void(0);"
-             class="pos3">吸引顾客</a>
+             class="pos3 myhidden"
+             ref="circle3">吸引顾客</a>
           <a href="javascript:void(0);"
-             class="pos4">消费数据</a>
+             class="pos4 myhidden"
+             ref="circle4">消费数据</a>
           <a href="javascript:void(0);"
-             class="pos5">人工智能</a>
-          <h2 class="cente_text">智慧数据分析</h2>
+             class="pos5 myhidden"
+             ref="circle5">人工智能</a>
+          <h2 class="cente_text myhidden" ref="circleText">智慧数据分析</h2>
         </div>
       </div>
     </div>
@@ -130,7 +137,6 @@ export default {
   },
   data () {
     return {
-      show: true,
       wisdomList: [
         {
           img: icon1,
@@ -179,7 +185,16 @@ export default {
     }
   },
   mounted () {
-    new ScrollAnimate(this.$refs.title,'fadeInUp')
+    /* 首页banner图标题 */
+    // new ScrollAnimate(this.$refs.cn, 'fadeInUp')
+    // new ScrollAnimate(this.$refs.en, 'fadeInUp')
+    /* 智慧数据动画 */
+    new ScrollAnimate(this.$refs.circle1, 'fadeInUp')
+    // new ScrollAnimate(this.$refs.circle2, 'fadeInUp')
+    // new ScrollAnimate(this.$refs.circle3, 'fadeInUp')
+    // new ScrollAnimate(this.$refs.circle4, 'fadeInUp')
+    // new ScrollAnimate(this.$refs.circle5, 'fadeInUp')
+    // new ScrollAnimate(this.$refs.circleText, 'fadeInUp')
   }
 }
 </script>
@@ -196,7 +211,6 @@ export default {
       font-size: 48px;
       color: #fefeff;
       text-align: center;
-      padding-top: 375px;
     }
     .en {
       font-size: 25px;
@@ -241,7 +255,6 @@ export default {
       height: 466px;
       background: url("../assets/images/circle1.png") no-repeat;
       background-size: 100% 100%;
-      position: relative;
       margin: 0 auto;
       a {
         display: block;
@@ -255,24 +268,24 @@ export default {
         position: absolute;
       }
       .pos1 {
-        left: 184px;
-        top: -46px;
+        margin-left: 184px;
+        margin-top: -46px;
       }
       .pos2 {
-        left: -34px;
-        top: 114px;
+        margin-left: -34px;
+        margin-top: 114px;
       }
       .pos3 {
-        left: 400px;
-        top: 114px;
+        margin-left: 400px;
+        margin-top: 114px;
       }
       .pos4 {
-        left: 38px;
-        top: 355px;
+        margin-left: 38px;
+        margin-top: 355px;
       }
       .pos5 {
-        left: 338px;
-        top: 355px;
+        margin-left: 338px;
+        margin-top: 355px;
       }
       .cente_text {
         font-size: 30px;

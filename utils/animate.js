@@ -10,7 +10,7 @@ export class ScrollAnimate {
     this.addAnimate = this.addAnimate.bind(this)
     this.dom = dom
     this.mode = mode
-    this.documentConetn = document.body || document.documentElement
+    this.isgoing = true
     this.init()
   }
   /* 初始化*/
@@ -26,21 +26,26 @@ export class ScrollAnimate {
   /* 监听滚动*/
   handleScroll() {
     let self = this;
-    self.addAnimate()
+    // self.addAnimate()
+    if(self.condition() && self.isgoing){
+      self.addAnimate()
+    }
   }
   /* 满足滚动触发动画的条件 */
   condition(){
-    return this.documentConetn.scrollTop + window.screen.availHeight >= this.dom.offsetHeight  + this.dom.offsetTop?true:false
+    return document.documentElement.scrollTop + window.screen.availHeight >= this.dom.offsetHeight  + this.dom.offsetTop?true:false
   }
   /* 添加动画*/
   addAnimate(){
     let self = this
+    self.isgoing = false
+    console.log(111)
     // /* 先删后加*/
-    this.dom.classList.remove('animated')
-    this.dom.classList.remove(self.mode)
+    self.dom.classList.remove('animated')
+    self.dom.classList.remove(self.mode)
     /* 去掉隐藏 */
-    this.dom.classList.remove('myhidden')
-    this.dom.classList.add('animated')
-    this.dom.classList.add(self.mode)
+    self.dom.classList.remove('myhidden')
+    self.dom.classList.add('animated')
+    self.dom.classList.add(self.mode)
   }
 }
