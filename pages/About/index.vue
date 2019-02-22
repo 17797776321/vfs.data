@@ -62,6 +62,7 @@ export default {
     }
   }
   .content_box {
+    width: 1920px;
     padding-top: 180px;
     padding-bottom: 360px;
     background-color: #f5f5f7;
