@@ -29,6 +29,13 @@
           </div>
         </div>
       </div>
+      <!--  -->
+      <div class="solution_box industry clearfix">
+        <div class="side fl"></div>
+        <ul class="main fl">
+          <li>111</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -94,6 +101,12 @@ export default {
             }
           ]
         },
+      ],
+      industry:[
+        {
+          title:'移动互联网行业',
+          des:'洞察用户属性，提升运营效果，智能解析行业新趋势'
+        }
       ]
     }
   }
@@ -197,6 +210,20 @@ export default {
             }
           }
         }
+      }
+    }
+    .industry{
+      margin-top: 38px;
+      .side{
+        width: 310px;
+        height: 634px;
+        background: url('../../assets/images/industry.png') no-repeat;
+        background-size: 100% 100%;
+      }
+      .main{
+        width: 960px;
+        margin-left: 10px;
+        vertical-align: top;
       }
     }
   }
