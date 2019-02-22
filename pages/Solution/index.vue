@@ -54,8 +54,8 @@
                  alt=""
                  class="bg">
             <div class="mask">
-              <h2 class="tit">{{item.title}}</h2>
-              <p class="des">{{item.des}}</p>
+              <h2 class="tit" :class="{'colorw':(index+1)%2 === 0}">{{item.title}}</h2>
+              <p class="des" :class="{'colorw':(index+1)%2 === 0}">{{item.des}}</p>
             </div>
           </li>
           <div class="clear"></div>
@@ -296,9 +296,6 @@ export default {
         .bgb {
           background-color: #01acf3 !important;
         }
-        .colorw {
-          color: #ffffff !important;
-        }
         .optioon {
           width: 310px;
           height: 310px;
@@ -330,6 +327,9 @@ export default {
               font-size: 20px;
               color: #333333;
               line-height: 30px;
+            }
+            .colorw{
+              color: #ffffff !important;
             }
           }
         }
