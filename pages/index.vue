@@ -13,7 +13,9 @@
           ref="en">Massive Data Leads the Future</h3>
       <div class="btn_group">
         <a href="javascript:void(0);"
+          @click="jump_page('/Wisdom')"
            class="wisdom_data">智慧数据</a><a href="javascript:void(0);"
+           @click="jump_page('/About')"
            class="contact_us">联系我们</a>
       </div>
     </div>
@@ -200,6 +202,9 @@ export default {
     },
     pagePos(boxName) {
       this.$scrollTo(`.${boxName}`,'1s')
+    },
+    jump_page(path) {
+      this.$router.push({path:path})
     }
   },
   mounted () {

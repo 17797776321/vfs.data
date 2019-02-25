@@ -41,6 +41,9 @@ export default {
       ]
     }
   },
+  methods:{
+    
+  },
   mounted() {
     new ScrollAnimate(this.$refs.banner_box_tit,'fadeInUp',0)
     new ScrollAnimate(this.$refs.banner_box_des,'fadeInUp',0)
