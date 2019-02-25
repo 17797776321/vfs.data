@@ -1,5 +1,5 @@
 <template>
-  <div class="my_nav">
+  <div class="my_nav" :class="{'bg':isShow}">
     <div class="width clearfix">
       <div class="logo_box fl">
         <img src="../../assets/images/logo.png"
@@ -26,22 +26,43 @@
 export default {
   name: 'MyNav',
   data () {
-    return {}
+    return {
+      isShow:false
+    }
   },
   methods:{
     jump_page(path) {
       this.$router.push({path:path})
+    },
+    myNavBg(){
+      if(document.documentElement.scrollTop > 0){
+        this.isShow = true
+      }
+      window.addEventListener('scroll',()=>{
+        if(document.documentElement.scrollTop > 0){
+          this.isShow = true
+        }else{
+          this.isShow = false
+        }
+      },false)
     }
+  },
+  mounted() {
+    this.myNavBg()
   }
 }
 </script>
 <style lang="less">
+.bg{
+  background-color: rgba(0,0,0,0.75) !important;
+}
 .my_nav {
   width: 1920px;
   background-color: rgba(0, 0, 0, 0);
   position: fixed;
   top: 0;
   z-index: 999;
+  transition: background-color .5s;
   .logo_box {
     padding: 18px 55px;
     img {
