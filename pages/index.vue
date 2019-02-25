@@ -73,9 +73,10 @@
         </div>
         <div class="main">
           <a href="javascript:void(0);"
-             class="option_box"
+             class="option_box myhidden"
              :class="[index === 2?'':'mr']"
              v-for="(item,index) in projectList"
+             :ref="item.name"
              :key="index">
             <div class="option_header">
               <!-- <span class="iconfont icon-xitong2"></span> -->
@@ -109,7 +110,6 @@
             <a href="javascript:void(0);">了解更多</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -169,21 +169,24 @@ export default {
           acimg: proac1,
           title: '数据管理',
           des: '基于云计算，为企业提供数据收集、抓取、集成、处理等定制化服务，制定一体化数据管理解决方案',
-          options: ['大数据云平台的搭建', '数据集成', '数据采集']
+          options: ['大数据云平台的搭建', '数据集成', '数据采集'],
+          name:'project1'
         },
         {
           img: pro2,
           acimg: proac2,
           title: '数据分析',
           des: '深入理解企业业务逻辑，为企业提供定制化的数据收集、清洗、建模、分析、可视化等服务。',
-          options: ['数据建模服务', '算法支撑服务', '数据可视化服务']
+          options: ['数据建模服务', '算法支撑服务', '数据可视化服务'],
+          name:'project2'
         },
         {
           img: pro3,
           acimg: proac3,
           title: '系统定制开发',
           des: '完善企业业务流程系统，建立销售平台、客户关系管理、风险防范等互联网弹性架构，实现多维度后台实时查询和监测。',
-          options: ['CRM系统', '金融业务系统']
+          options: ['CRM系统', '金融业务系统'],
+          name:'project3'
         },
       ]
     }
@@ -205,6 +208,10 @@ export default {
     new ScrollAnimate(this.$refs.advantage2, 'rotateInUpLeft',true)
     new ScrollAnimate(this.$refs.advantage3, 'rotateInUpLeft',true)
     new ScrollAnimate(this.$refs.advantage4, 'rotateInUpLeft',true)
+
+    new ScrollAnimate(this.$refs.project1, 'fadeInUp',true)
+    new ScrollAnimate(this.$refs.project2, 'fadeInUp',true)
+    new ScrollAnimate(this.$refs.project3, 'fadeInUp',true)
   }
 }
 </script>
