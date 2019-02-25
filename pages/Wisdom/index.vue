@@ -1,10 +1,12 @@
 <template>
   <div class="page-wisdom">
     <div class="banenr_box">
-      <h2 class="content">以智慧数据为基础，立足行业新场景</h2>
+      <div style="padding-top:368px">
+        <h2 class="content" ref="banenr_box_tit">以智慧数据为基础，立足行业新场景</h2>
+      </div>
     </div>
     <div class="box1">
-      <div class="width">
+      <div class="width myhidden" ref="box1">
         <div class="header">
           <h1>大数据</h1>
           <h2>云端自动拓客</h2>
@@ -18,7 +20,7 @@
       </div>
     </div>
     <div class="box2">
-      <div class="width">
+      <div class="width myhidden" ref="box2">
         <div class="header">
           <h1>小微数据</h1>
           <h2>基于微信的Social-CRM系统</h2>
@@ -31,7 +33,7 @@
       </div>
     </div>
     <div class="box3">
-      <div class="width">
+      <div class="width myhidden" ref="box3">
         <div class="header">
           <h1>用户画像</h1>
           <h1>精准客户分群</h1>
@@ -45,7 +47,7 @@
       </div>
     </div>
     <div class="box4">
-      <div class="width">
+      <div class="width myhidden" ref="box4">
         <div class="header">
           <h2><b>拓展</b>新客户</h2>
         </div>
@@ -57,7 +59,7 @@
       </div>
     </div>
     <div class="box5">
-      <div class="width">
+      <div class="width myhidden" ref="box5">
         <div class="header">
           <h2><b>大数据</b>分析</h2>
         </div>
@@ -72,9 +74,19 @@
   </div>
 </template>
 <script>
+import { ScrollAnimate } from '@/utils/animate.js'
 export default {
   data() {
     return {}
+  },
+  mounted() {
+     new ScrollAnimate(this.$refs.banenr_box_tit,'fadeInUp',0)
+
+     new ScrollAnimate(this.$refs.box1,'fadeInUp',0)
+     new ScrollAnimate(this.$refs.box2,'fadeInUp',0)
+     new ScrollAnimate(this.$refs.box3,'fadeInUp',0)
+     new ScrollAnimate(this.$refs.box4,'fadeInUp',0)
+     new ScrollAnimate(this.$refs.box5,'fadeInUp',0)
   }
 }
 </script>
@@ -86,7 +98,6 @@ export default {
     background: url('../../assets/images/wisdombanner.png') no-repeat;
     background-size: 100% 100%;
     .content{
-      padding-top: 368px;
       font-size: 40px;
       color: #ffffff;
       text-align: center;
