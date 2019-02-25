@@ -94,16 +94,16 @@
       </div>
     </div>
     <!-- 关于我们 -->
-    <div class="about_box">
+    <div class="about_box" ref="about_box">
       <div class="width">
         <div class="header">
           关于我们 · About
         </div>
-        <div class="box1">
+        <div class="box1 myhidden" ref="about_img">
           <img src="../assets/images/box1.png"
                alt="">
         </div>
-        <div class="box2">
+        <div class="box2 myhidden" ref="about_content">
           <h2 class="tit">河南微风尚科技有限公司</h2>
           <p class="des">我们的客户来自各行各业，为了共同目标，我们在工作上密切配合，从创业型小企业到知名品牌，感谢他们对我们的高要求从不同领域给我们带来的挑战，让我们激情的团队有机会用头脑与智慧不断的给客户带来惊喜。</p>
           <div class="more">
@@ -193,25 +193,31 @@ export default {
   },
   mounted () {
     /* 首页banner图标题 */
-    new ScrollAnimate(this.$refs.cn, 'fadeInUp')
-    new ScrollAnimate(this.$refs.en, 'fadeInUp')
+    new ScrollAnimate(this.$refs.cn,'fadeInUp',0)
+    new ScrollAnimate(this.$refs.en,'fadeInUp',0)
     // /* 智慧数据动画 */
-    new ScrollAnimate(this.$refs.circle1, 'fadeInUp')
-    new ScrollAnimate(this.$refs.circle2, 'fadeInUp')
-    new ScrollAnimate(this.$refs.circle3, 'fadeInUp')
-    new ScrollAnimate(this.$refs.circle4, 'fadeInUp')
-    new ScrollAnimate(this.$refs.circle5, 'fadeInUp')
-    new ScrollAnimate(this.$refs.circleText, 'fadeInUp')
+    new ScrollAnimate(this.$refs.circle1,'fadeInUp',0)
+    new ScrollAnimate(this.$refs.circle2,'fadeInUp',0)
+    new ScrollAnimate(this.$refs.circle3,'fadeInUp',0)
+    new ScrollAnimate(this.$refs.circle4,'fadeInUp',0)
+    new ScrollAnimate(this.$refs.circle5,'fadeInUp',0)
+    new ScrollAnimate(this.$refs.circleText,'fadeInUp',0)
 
     /* 小微优势 */
-    new ScrollAnimate(this.$refs.advantage1, 'rotateInUpLeft',true)
-    new ScrollAnimate(this.$refs.advantage2, 'rotateInUpLeft',true)
-    new ScrollAnimate(this.$refs.advantage3, 'rotateInUpLeft',true)
-    new ScrollAnimate(this.$refs.advantage4, 'rotateInUpLeft',true)
+    new ScrollAnimate(this.$refs.advantage1,'rotateInUpLeft',0,true)
+    new ScrollAnimate(this.$refs.advantage2,'rotateInUpLeft',0,true)
+    new ScrollAnimate(this.$refs.advantage3,'rotateInUpLeft',0,true)
+    new ScrollAnimate(this.$refs.advantage4,'rotateInUpLeft',0,true)
 
-    new ScrollAnimate(this.$refs.project1, 'fadeInUp',true)
-    new ScrollAnimate(this.$refs.project2, 'fadeInUp',true)
-    new ScrollAnimate(this.$refs.project3, 'fadeInUp',true)
+    new ScrollAnimate(this.$refs.project1,'fadeInUp',0,true)
+    new ScrollAnimate(this.$refs.project2,'fadeInUp',0,true)
+    new ScrollAnimate(this.$refs.project3,'fadeInUp',0,true)
+
+    // 获取 当前DOM所在父元素高度
+    console.log(222)
+    let aboutH = this.$refs.about_box.offsetTop;
+    new ScrollAnimate(this.$refs.about_img,'fadeInLeft',aboutH)
+    new ScrollAnimate(this.$refs.about_content,'fadeInRight',aboutH)
   }
 }
 </script>

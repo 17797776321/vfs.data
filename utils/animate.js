@@ -4,12 +4,13 @@
   * date: 2019-2-22
 **/
 export class ScrollAnimate {
-  constructor(dom,mode,isVue) {
+  constructor(dom,mode,parentHeight,isVue) {
     this.handleScroll = this.handleScroll.bind(this)
     this.init = this.init.bind(this)
     this.addAnimate = this.addAnimate.bind(this)
     this.dom = dom
     this.mode = mode
+    this.parentHeight = parentHeight
     this.isgoing = true
     this.isVue = isVue || false
     this.init()
@@ -35,9 +36,9 @@ export class ScrollAnimate {
   /* 满足滚动触发动画的条件 */
   condition(){
     if(this.isVue){
-      return document.documentElement.scrollTop + window.screen.availHeight >= this.dom[0].offsetHeight  + this.dom[0].offsetTop?true:false
+      return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom[0].offsetHeight  + this.dom[0].offsetTop?true:false
     }else{
-      return document.documentElement.scrollTop + window.screen.availHeight >= this.dom.offsetHeight  + this.dom.offsetTop?true:false
+      return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom.offsetHeight  + this.dom.offsetTop?true:false
     }
   }
   /* 添加动画*/
