@@ -35,7 +35,6 @@ export class ScrollAnimate {
   /* 满足滚动触发动画的条件 */
   condition(){
     if(this.isVue){
-      console.log(document.documentElement.scrollTop + window.screen.availHeight >= this.dom[0].offsetHeight  + this.dom[0].offsetTop)
       return document.documentElement.scrollTop + window.screen.availHeight >= this.dom[0].offsetHeight  + this.dom[0].offsetTop?true:false
     }else{
       return document.documentElement.scrollTop + window.screen.availHeight >= this.dom.offsetHeight  + this.dom.offsetTop?true:false
@@ -45,7 +44,6 @@ export class ScrollAnimate {
   addAnimate(){
     let self = this
     self.isgoing = false
-    console.log(111)
     if(this.isVue){
       /* 先删后加*/
       self.dom[0].classList.remove('animated')

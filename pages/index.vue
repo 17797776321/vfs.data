@@ -201,7 +201,6 @@ export default {
     new ScrollAnimate(this.$refs.circleText, 'fadeInUp')
 
     /* 小微优势 */
-    console.log(this.$refs.advantage1)
     new ScrollAnimate(this.$refs.advantage1, 'rotateInUpLeft',true)
     new ScrollAnimate(this.$refs.advantage2, 'rotateInUpLeft',true)
     new ScrollAnimate(this.$refs.advantage3, 'rotateInUpLeft',true)
