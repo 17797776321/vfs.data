@@ -1,7 +1,7 @@
 <template>
   <section class="page-home">
     <!-- 侧边导航 -->
-    <my-sitebar></my-sitebar>
+    <my-sitebar :scroll-top="scrollTop"></my-sitebar>
     <!-- 智慧数据 -->
     <div class="banner_box">
       <div style="padding-top:375px">
@@ -137,6 +137,7 @@ export default {
   },
   data () {
     return {
+      scrollTop: 0,
       wisdomList: [
         {
           img: icon1,
@@ -191,7 +192,16 @@ export default {
       ]
     }
   },
+  methods:{
+    pageScroll() {
+      window.addEventListener('scroll',()=>{
+        this.scrollTop = document.documentElement.scrollTop;
+      },false)
+    }
+  },
   mounted () {
+    /* 监听滚动 */
+    this.pageScroll()
     /* 首页banner图标题 */
     new ScrollAnimate(this.$refs.cn,'fadeInUp',0)
     new ScrollAnimate(this.$refs.en,'fadeInUp',0)
@@ -214,7 +224,6 @@ export default {
     new ScrollAnimate(this.$refs.project3,'fadeInUp',0,true)
 
     // 获取 当前DOM所在父元素高度
-    console.log(222)
     let aboutH = this.$refs.about_box.offsetTop;
     new ScrollAnimate(this.$refs.about_img,'fadeInLeft',aboutH)
     new ScrollAnimate(this.$refs.about_content,'fadeInRight',aboutH)
