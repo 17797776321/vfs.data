@@ -1,7 +1,9 @@
 <template>
   <div class="layout">
     <my-nav></my-nav>
-    <nuxt class="views_box"/>
+    <transition name="fade">
+      <nuxt class="views_box"/>
+    </transition>
     <my-footer></my-footer>
   </div>
 </template>
@@ -23,6 +25,12 @@ export default {
 </script>
 
 <style lang="less">
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .layout{
   .views_box{
   }
