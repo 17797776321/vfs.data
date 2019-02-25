@@ -51,7 +51,7 @@
               <img :src="item.img"
                    alt="">
             </div>
-            <div class="text_box fl">
+            <div class="text_box fl myhidden" :ref="item.name">
               <h2 class="tit">{{item.title}}</h2>
               <p class="des">{{item.des}}</p>
             </div>
@@ -141,22 +141,26 @@ export default {
         {
           img: icon1,
           title: '营销云',
-          des: '全媒体整合多渠道广告触达,线上线下数据搜集实现场景化营销,唯一恪守贴牌定制合作模式,自主溢价模式利润高。'
+          des: '全媒体整合多渠道广告触达,线上线下数据搜集实现场景化营销,唯一恪守贴牌定制合作模式,自主溢价模式利润高。',
+          name:'advantage1'
         },
         {
           img: icon2,
           title: '数据管理DMP',
-          des: '全媒体整合多渠道广告触达,释放数据价值，提升营销效果全面精确的人群管理安全、开放、专业。'
+          des: '全媒体整合多渠道广告触达,释放数据价值，提升营销效果全面精确的人群管理安全、开放、专业。',
+          name:'advantage2'
         },
         {
           img: icon3,
           title: '智子盒子',
-          des: '人工智能营销管家，线上线下数据汇通融合，智慧零售零距离营销，打破线下实体营销困境。'
+          des: '人工智能营销管家，线上线下数据汇通融合，智慧零售零距离营销，打破线下实体营销困境。',
+          name:'advantage3'
         },
         {
           img: icon4,
           title: '大数据解决方案',
-          des: '广告转化预测模型和系统解决方案，广告投放CTR预测模型解决方案，数据标签化处理和资产变现解决方案，个性化推荐解决方案。'
+          des: '广告转化预测模型和系统解决方案，广告投放CTR预测模型解决方案，数据标签化处理和资产变现解决方案，个性化推荐解决方案。',
+          name:'advantage4'
         }
       ],
       projectList: [
@@ -186,15 +190,22 @@ export default {
   },
   mounted () {
     /* 首页banner图标题 */
-    // new ScrollAnimate(this.$refs.cn, 'fadeInUp')
-    // new ScrollAnimate(this.$refs.en, 'fadeInUp')
-    /* 智慧数据动画 */
+    new ScrollAnimate(this.$refs.cn, 'fadeInUp')
+    new ScrollAnimate(this.$refs.en, 'fadeInUp')
+    // /* 智慧数据动画 */
     new ScrollAnimate(this.$refs.circle1, 'fadeInUp')
-    // new ScrollAnimate(this.$refs.circle2, 'fadeInUp')
-    // new ScrollAnimate(this.$refs.circle3, 'fadeInUp')
-    // new ScrollAnimate(this.$refs.circle4, 'fadeInUp')
-    // new ScrollAnimate(this.$refs.circle5, 'fadeInUp')
-    // new ScrollAnimate(this.$refs.circleText, 'fadeInUp')
+    new ScrollAnimate(this.$refs.circle2, 'fadeInUp')
+    new ScrollAnimate(this.$refs.circle3, 'fadeInUp')
+    new ScrollAnimate(this.$refs.circle4, 'fadeInUp')
+    new ScrollAnimate(this.$refs.circle5, 'fadeInUp')
+    new ScrollAnimate(this.$refs.circleText, 'fadeInUp')
+
+    /* 小微优势 */
+    console.log(this.$refs.advantage1)
+    new ScrollAnimate(this.$refs.advantage1, 'rotateInUpLeft',true)
+    new ScrollAnimate(this.$refs.advantage2, 'rotateInUpLeft',true)
+    new ScrollAnimate(this.$refs.advantage3, 'rotateInUpLeft',true)
+    new ScrollAnimate(this.$refs.advantage4, 'rotateInUpLeft',true)
   }
 }
 </script>
