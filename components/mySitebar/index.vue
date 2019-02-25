@@ -60,11 +60,11 @@ export default {
       &::after{
         content:'';
         display: block;
-        width: 75%;
+        width: 35%;
         height: 2px;
         background-color: #999999;
         position: absolute;
-        left: 13px;
+        left: 32px;
         bottom: 0;
         z-index: 999;
       }
