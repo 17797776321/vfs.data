@@ -1,5 +1,5 @@
 <template>
-  <div class="my_nav" :class="{'bg':isShow}">
+  <div class="my_nav" :class="{'navbg':isShow}">
     <div class="width clearfix">
       <div class="logo_box fl">
         <img src="../../assets/images/logo.png"
@@ -53,7 +53,7 @@ export default {
 }
 </script>
 <style lang="less">
-.bg{
+.navbg{
   background-color: rgba(0,0,0,0.75) !important;
 }
 .my_nav {
