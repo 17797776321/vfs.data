@@ -198,8 +198,8 @@ export default {
         this.scrollTop = document.documentElement.scrollTop;
       },false)
     },
-    pagePos(num) {
-      console.log(num)
+    pagePos(boxName) {
+      this.$scrollTo(`.${boxName}`,'1s')
     }
   },
   mounted () {
