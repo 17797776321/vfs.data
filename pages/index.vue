@@ -1,7 +1,7 @@
 <template>
   <section class="page-home">
     <!-- 侧边导航 -->
-    <my-sitebar :scroll-top="scrollTop"></my-sitebar>
+    <my-sitebar :scroll-top="scrollTop" @pagePos="pagePos"></my-sitebar>
     <!-- 智慧数据 -->
     <div class="banner_box">
       <div style="padding-top:375px">
@@ -197,6 +197,9 @@ export default {
       window.addEventListener('scroll',()=>{
         this.scrollTop = document.documentElement.scrollTop;
       },false)
+    },
+    pagePos(num) {
+      console.log(num)
     }
   },
   mounted () {

@@ -1,11 +1,11 @@
 <template>
   <div class="sitebar">
     <ul class="list">
-      <li class="option" :class="{'active':scrollTop>=0 && scrollTop<960}"><a href="javascript:void(0);" @click="jumpPos()">智慧数据</a></li>
-      <li class="option" :class="{'active':scrollTop>=960 && scrollTop<2870}"><a href="javascript:void(0);" @click="jumpPos()">智慧服务</a></li>
-      <li class="option" :class="{'active':scrollTop>=2870 && scrollTop<3950}"><a href="javascript:void(0);" @click="jumpPos()">小微优势</a></li>
-      <li class="option" :class="{'active':scrollTop>=3950 && scrollTop<4007}"><a href="javascript:void(0);" @click="jumpPos()">关于我们</a></li>
-      <li class="option" :class="{'active':scrollTop>=4007}"><a href="javascript:void(0);" @click="jumpPos()">联系我们</a></li>
+      <li class="option" :class="{'active':scrollTop>=0 && scrollTop<960}"><a href="javascript:void(0);" @click="jumpPos(1)">智慧数据</a></li>
+      <li class="option" :class="{'active':scrollTop>=960 && scrollTop<2870}"><a href="javascript:void(0);" @click="jumpPos(2)">智慧服务</a></li>
+      <li class="option" :class="{'active':scrollTop>=2870 && scrollTop<3950}"><a href="javascript:void(0);" @click="jumpPos(3)">小微优势</a></li>
+      <li class="option" :class="{'active':scrollTop>=3950 && scrollTop<4007}"><a href="javascript:void(0);" @click="jumpPos(4)">关于我们</a></li>
+      <li class="option" :class="{'active':scrollTop>=4007}"><a href="javascript:void(0);" @click="jumpPos(5)">联系我们</a></li>
     </ul>
   </div>
 </template>
@@ -21,8 +21,8 @@ export default {
     return {}
   },
   methods:{
-    jumpPos(){
-      console.log(111)
+    jumpPos(num){
+      this.$emit('pagePos',num)
     }
   },
   mounted() {
@@ -37,6 +37,7 @@ export default {
   position: fixed;
   right: 80px;
   top: 426px;
+  z-index: 99;
   .list {
     .option {
       font-size: 14px;
