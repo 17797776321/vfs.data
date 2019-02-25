@@ -221,7 +221,7 @@ export default {
     new ScrollAnimate(this.$refs.advantage2,'rotateInUpLeft',0,true)
     new ScrollAnimate(this.$refs.advantage3,'rotateInUpLeft',0,true)
     new ScrollAnimate(this.$refs.advantage4,'rotateInUpLeft',0,true)
-
+  
     new ScrollAnimate(this.$refs.project1,'fadeInUp',0,true)
     new ScrollAnimate(this.$refs.project2,'fadeInUp',0,true)
     new ScrollAnimate(this.$refs.project3,'fadeInUp',0,true)

@@ -1,8 +1,10 @@
 <template>
   <div class="page-solution">
     <div class="banner_box">
-      <h2 class="tit">当数据发出声音时，我们可以帮助您找到最佳倾听方式</h2>
-      <p class="tit_eng">When data sounds, we can help you find the best way to listen.</p>
+      <div style="padding-top: 334px;">
+        <h2 class="tit myhidden" ref="cn">当数据发出声音时，我们可以帮助您找到最佳倾听方式</h2>
+        <p class="tit_eng myhidden" ref="en">When data sounds, we can help you find the best way to listen.</p>
+      </div>
     </div>
     <div class="main_box">
       <!-- 项目介绍 -->
@@ -11,7 +13,8 @@
           <a href="javascript:void(0);"
              v-for="(item,index) in introList"
              :key="index"
-             class="intro_option">
+             class="intro_option myhidden"
+             :ref="item.name">
             <img :src="item.img"
                  alt=""
                  class="icon">
@@ -20,7 +23,7 @@
         </div>
       </div>
       <!-- 能力 -->
-      <div class="solution_box ability_box">
+      <div class="solution_box ability_box" ref="ability_box">
         <div class="width clearfix">
           <div class="box fl"
                v-for="(item,index) in ability"
@@ -28,8 +31,9 @@
             <h2 class="header">{{item.title}}</h2>
             <div class="main">
               <a href="javascript:void(0);"
-                 class="option"
+                 class="option myhidden"
                  v-for="(mitem,nindex) in item.options"
+                 :ref="mitem.name"
                  :key="nindex"
                  :class="[nindex === 0?'mr':'']">
                 <img class="img_box"
@@ -65,6 +69,8 @@
   </div>
 </template>
 <script>
+import { ScrollAnimate } from '@/utils/animate.js'
+
 import intro1 from '@/assets/images/intro1.png'
 import intro2 from '@/assets/images/intro2.png'
 import intro3 from '@/assets/images/intro3.png'
@@ -89,19 +95,23 @@ export default {
       introList: [
         {
           img: intro1,
-          title: '大数据预测更安全'
+          title: '大数据预测更安全',
+          name:'intro1'
         },
         {
           img: intro2,
-          title: '更多服务场景'
+          title: '更多服务场景',
+          name:'intro2'
         },
         {
           img: intro3,
-          title: '用户画像精准描述'
+          title: '用户画像精准描述',
+          name:'intro3'
         },
         {
           img: intro4,
-          title: 'AI助力更省力'
+          title: 'AI助力更省力',
+          name:'intro4'
         }
       ],
       ability: [
@@ -111,12 +121,14 @@ export default {
             {
               img: ability1,
               tit: '线上行为',
-              des: '基于APP行为数据'
+              des: '基于APP行为数据',
+              name:'ability1'
             },
             {
               img: ability2,
               tit: '线下行为',
-              des: '基于场景活动数据'
+              des: '基于场景活动数据',
+              name:'ability2'
             }
           ]
         },
@@ -126,12 +138,14 @@ export default {
             {
               img: ability3,
               tit: '线上捕捉',
-              des: '通过大数据挖掘和行为建模来推测用户当下的手机使用行为场景'
+              des: '通过大数据挖掘和行为建模来推测用户当下的手机使用行为场景',
+              name:'ability3'
             },
             {
               img: ability4,
               tit: '线下捕捉',
-              des: '通过用户线下场景活动数据，分析用户当下时间所处的位置场景'
+              des: '通过用户线下场景活动数据，分析用户当下时间所处的位置场景',
+              name:'ability4'
             }
           ]
         },
@@ -140,35 +154,57 @@ export default {
         {
           title: '移动互联网行业',
           des: '洞察用户属性，提升运营效果，智能解析行业新趋势',
-          img: ind1
+          img: ind1,
+          name:'ind1'
         },
         {
           title: '金融行业',
           des: '精准客群定位，促进产品推广与转化',
-          img: ind2
+          img: ind2,
+          name:'ind2'
         },
         {
           title: '营销行业',
           des: '通过大数据用户画像与地理位置信息的结合，优化广告投放效果',
-          img: ind3
+          img: ind3,
+          name:'ind3'
         },
         {
           title: '旅游行业',
           des: '与各省市旅游局合作，监测景区人流状况并智能分析',
-          img: ind4
+          img: ind4,
+          name:'ind4'
         },
         {
           title: '房地产行业',
           des: '为土地研究、区域规划、房产政策提供数据咨询和指导',
-          img: ind5
+          img: ind5,
+          name:'ind16'
         },
         {
           title: '公共服务',
           des: '为国家地震灾害、春运等提供数据支持与服务',
-          img: ind6
+          img: ind6,
+          name:'ind6'
         }
       ]
     }
+  },
+  mounted() {
+    new ScrollAnimate(this.$refs.cn,'fadeInUp',0)
+    new ScrollAnimate(this.$refs.en,'fadeInUp',0)
+
+    new ScrollAnimate(this.$refs.intro1,'fadeInUp',0,true)
+    new ScrollAnimate(this.$refs.intro2,'fadeInUp',0,true)
+    new ScrollAnimate(this.$refs.intro3,'fadeInUp',0,true)
+    new ScrollAnimate(this.$refs.intro4,'fadeInUp',0,true)
+
+    
+    let abilityTop = this.$refs.ability_box.offsetTop
+    new ScrollAnimate(this.$refs.ability1,'fadeInUp',abilityTop ,true)
+    new ScrollAnimate(this.$refs.ability2,'fadeInUp',abilityTop ,true)
+    new ScrollAnimate(this.$refs.ability3,'fadeInUp',abilityTop ,true)
+    new ScrollAnimate(this.$refs.ability4,'fadeInUp',abilityTop ,true)
   }
 }
 </script>
@@ -182,7 +218,6 @@ export default {
     color: #fefeff;
     text-align: center;
     .tit {
-      padding-top: 334px;
       font-size: 44px;
       line-height: 70px;
     }
