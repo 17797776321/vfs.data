@@ -38,7 +38,9 @@ export class ScrollAnimate {
     if(!this.isVue){
       return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom.offsetHeight  + this.dom.offsetTop?true:false
     }else{
-      return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom[0].offsetHeight  + this.dom[0].offsetTop?true:false
+      try{
+        return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom[0].offsetHeight  + this.dom[0].offsetTop?true:false
+      }catch(e){}
     }
   }
   /* 添加动画*/
