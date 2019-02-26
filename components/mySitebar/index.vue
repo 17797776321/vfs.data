@@ -27,7 +27,6 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll',()=>{
-      console.log(this.scrollTop)
     },false)
   }
 }
