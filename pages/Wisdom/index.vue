@@ -85,7 +85,6 @@ export default {
     return {}
   },
   mounted() {
-    console.log(this.aa)
     this.$nextTick(()=>{
       new ScrollAnimate(this.$refs.banenr_box_tit,'fadeInUp',0)
 
