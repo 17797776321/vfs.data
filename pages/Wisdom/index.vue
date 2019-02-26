@@ -76,17 +76,25 @@
 <script>
 import { ScrollAnimate } from '@/utils/animate.js'
 export default {
+  asyncData (context){
+    return {
+      dev:context.isDev
+    }
+  },
   data() {
     return {}
   },
   mounted() {
-     new ScrollAnimate(this.$refs.banenr_box_tit,'fadeInUp',0)
+    console.log(this.aa)
+    this.$nextTick(()=>{
+      new ScrollAnimate(this.$refs.banenr_box_tit,'fadeInUp',0)
 
-     new ScrollAnimate(this.$refs.box1,'fadeInUp',0)
-     new ScrollAnimate(this.$refs.box2,'fadeInUp',0)
-     new ScrollAnimate(this.$refs.box3,'fadeInUp',0)
-     new ScrollAnimate(this.$refs.box4,'fadeInUp',0)
-     new ScrollAnimate(this.$refs.box5,'fadeInUp',0)
+      new ScrollAnimate(this.$refs.box1,'fadeInUp',0)
+      new ScrollAnimate(this.$refs.box2,'fadeInUp',0)
+      new ScrollAnimate(this.$refs.box3,'fadeInUp',0)
+      new ScrollAnimate(this.$refs.box4,'fadeInUp',0)
+      new ScrollAnimate(this.$refs.box5,'fadeInUp',0)
+    })
   }
 }
 </script>

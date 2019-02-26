@@ -35,10 +35,10 @@ export class ScrollAnimate {
   }
   /* 满足滚动触发动画的条件 */
   condition(){
-    if(this.isVue){
-      return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom[0].offsetHeight  + this.dom[0].offsetTop?true:false
-    }else{
+    if(!this.isVue){
       return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom.offsetHeight  + this.dom.offsetTop?true:false
+    }else{
+      return document.documentElement.scrollTop + window.screen.availHeight >= this.parentHeight+this.dom[0].offsetHeight  + this.dom[0].offsetTop?true:false
     }
   }
   /* 添加动画*/
